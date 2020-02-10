@@ -17,6 +17,7 @@ namespace OdeToFood.Pages.Restaurants
 
         public string Message { get; set; }
         public IEnumerable<Restaurant> Restaurants { get; set; }
+        public string SearchTerm { get; set; }
 
 
         public ListModel(IConfiguration config, IRestaurantData restaurantData)
@@ -28,7 +29,7 @@ namespace OdeToFood.Pages.Restaurants
         public void OnGet(string searchTerm)
         {
             Message = _config["Message"];
-            Restaurants = _restaurantData.GetRestaurantsByName(searchTerm);
+            Restaurants = _restaurantData.GetRestaurantsByName(SearchTerm);
 
         }
     }

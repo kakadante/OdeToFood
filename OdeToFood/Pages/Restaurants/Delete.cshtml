@@ -1,17 +1,9 @@
 ﻿@page "{restaurantId}"
 @model OdeToFood.DeleteModel
 @{
-    Layout = null;
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Delete</title>
-</head>
-<body>
     <h2>Delete</h2>
 
     <div class="alert alert-danger">Are you sure you want to delete @Model.Restaurant.Name</div>
@@ -21,6 +13,3 @@
         <a asp-page="List" class="btn btn-dark">Cancel</a>
     </form>
 
-
-</body>
-</html>
